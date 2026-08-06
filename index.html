@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>RedLab HRA</title>
+    
+    <!-- Tailwind CSS para los estilos rápidos sin archivos extra -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome para los íconos de la barra inferior -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Evita que el usuario haga zoom por accidente en la pantalla táctil -->
+    <style>
+        body { touch-action: manipulation; }
+    </style>
+</head>
+<body class="bg-gray-100 h-screen flex flex-col font-sans antialiased">
+
+    <!-- Encabezado Superior -->
+    <header class="bg-teal-700 text-white p-4 shadow-md sticky top-0 z-10 flex justify-between items-center">
+        <h1 class="text-xl font-bold"><i class="fa-solid fa-microscope mr-2"></i>RedLab HRA</h1>
+        <div class="w-8 h-8 bg-teal-500 rounded-full flex items-center justify-center font-bold shadow-inner">
+            <!-- Espacio para la foto de perfil o iniciales -->
+            TM
+        </div>
+    </header>
+
+    <!-- Área de Contenido Principal (Scrollable) -->
+    <main class="flex-1 overflow-y-auto p-4 pb-20">
+        
+        <!-- Tarjeta de Cumpleaños Destacada -->
+        <div class="bg-white rounded-xl shadow-sm p-4 mb-5 border-l-4 border-pink-500">
+            <div class="flex items-center">
+                <div class="bg-pink-100 p-2 rounded-full mr-3">
+                    <i class="fa-solid fa-cake-candles text-pink-500 text-xl w-6 text-center"></i>
+                </div>
+                <div>
+                    <h2 class="font-bold text-gray-800 leading-tight">¡Cumpleaños este mes!</h2>
+                    <p class="text-sm text-gray-500 mt-1">Dra. Silva - 15 de Agosto</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="text-gray-500 font-semibold mb-3 text-xs uppercase tracking-wider">Actividad Reciente</h3>
+        
+        <!-- Tarjeta de Foro 1 -->
+        <div class="bg-white rounded-xl shadow-sm p-4 mb-3 border border-gray-100">
+            <div class="flex justify-between items-start mb-2">
+                <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wide">Protocolos</span>
+                <span class="text-xs text-gray-400">Hace 2 horas</span>
+            </div>
+            <h4 class="font-bold text-gray-800 mb-1 text-sm">Actualización criterios de rechazo (Papanicolaou)</h4>
+            <p class="text-sm text-gray-600 line-clamp-2">Por favor revisar el nuevo documento subido respecto a la validación de muestras de citopatología en Citoweb antes del cierre de turno.</p>
+        </div>
+
+        <!-- Tarjeta de Foro 2 -->
+        <div class="bg-white rounded-xl shadow-sm p-4 mb-3 border border-gray-100">
+            <div class="flex justify-between items-start mb-2">
+                <span class="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wide">Avisos Generales</span>
+                <span class="text-xs text-gray-400">Ayer</span>
+            </div>
+            <h4 class="font-bold text-gray-800 mb-1 text-sm">Mantenimiento de procesadores</h4>
+            <p class="text-sm text-gray-600 line-clamp-2">Los equipos del área de histopatología estarán en mantenimiento preventivo este viernes desde las 08:00 hrs. Tomar precauciones.</p>
+        </div>
+
+    </main>
+
+    <!-- Barra de Navegación Inferior -->
+    <nav class="bg-white border-t border-gray-200 fixed bottom-0 w-full" style="padding-bottom: env(safe-area-inset-bottom);">
+        <div class="flex justify-around items-center h-16">
+            <!-- Botón Foros (Activo por defecto en esta vista) -->
+            <button class="flex flex-col items-center justify-center w-full h-full text-teal-700">
+                <i class="fa-solid fa-comments text-xl mb-1"></i>
+                <span class="text-[10px] font-medium">Foros</span>
+            </button>
+            
+            <!-- Botón Chat en Vivo -->
+            <button class="flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-teal-700 transition-colors">
+                <i class="fa-solid fa-bolt text-xl mb-1"></i>
+                <span class="text-[10px] font-medium">Chat Vivo</span>
+            </button>
+            
+            <!-- Botón Cumpleaños/Eventos -->
+            <button class="flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-teal-700 transition-colors">
+                <i class="fa-solid fa-calendar-check text-xl mb-1"></i>
+                <span class="text-[10px] font-medium">Eventos</span>
+            </button>
+        </div>
+    </nav>
+
+</body>
+</html>
